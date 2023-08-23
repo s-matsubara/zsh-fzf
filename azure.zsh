@@ -14,7 +14,7 @@ function _azure_change_subscription() {
   fi
 
   if [[ -z "${subscription}" ]]; then
-    subscription=$(az account list -o tsv | fzf --exit=0 | awk 'print $3')
+    subscription=$(az account list --all -o tsv | fzf --exit-0 | awk 'print $3')
   fi
 
   if [[ -z "${subscription}" ]]; then return 1; fi
@@ -52,4 +52,4 @@ function _azure_change_kubernetes() {
   return $?
 }
 
-alias kg=_azure_change_kubernetes
+alias ka=_azure_change_kubernetes
