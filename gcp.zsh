@@ -30,15 +30,15 @@ function _gcp_create_configuration() {
 function _gcp_activate_configuration() {
   local project="$1"
 
-  if [[ -n ${project} ]]; then
-    _gcp_check_configuration "${project}"
+  if [[ -z "${project}" ]]; then return 1; fi
 
-    if [[ $? == 1 ]];
-    then
-      _gcp_create_configuration "${project}"
-    else
-      gcloud config configurations activate "${project}"
-    fi
+  _gcp_check_configuration "${project}"
+
+  if [[ $? == 1 ]];
+  then
+    _gcp_create_configuration "${project}"
+  else
+    gcloud config configurations activate "${project}"
   fi
 
   return $?
@@ -95,6 +95,9 @@ function _gcp_compute_ssh() {
   project=$(gcloud config get-value project)
 
   result=$(gcloud compute instances list | fzf --header-lines=1)
+
+  if [[ -z "${result}" ]]; then return 1; fi
+
   instance=$(echo "${result}" | awk 'print $1')
   zone=$(echo "${result}" | awk 'print $1')
 
@@ -133,7 +136,7 @@ function _gcp_kubernetes_activate() {
 }
 
 function _gcp_change_kubernetes() {
-  cluster="$1"
+  local cluster="$1"
 
   if [[ -z "${cluster}" ]]; then
     line=$(gcloud container clusters list | fzf --header-lines=1)
