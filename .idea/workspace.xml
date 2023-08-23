@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce942d79-c752-46a8-99c1-bfd4d8a586c5" name="変更" comment="Refactor gcp.zsh for better error handling and variable scope">
-      <change afterPath="$PROJECT_DIR$/aws.zsh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="ce942d79-c752-46a8-99c1-bfd4d8a586c5" name="変更" comment="Add AWS profile switcher function to aws.zsh">
+      <change beforePath="$PROJECT_DIR$/cloud-cli.zsh" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-cli.zsh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,7 +189,7 @@
       <workItem from="1694852129721" duration="12242000" />
       <workItem from="1695006348661" duration="1016000" />
       <workItem from="1695007407307" duration="874000" />
-      <workItem from="1695048318841" duration="1183000" />
+      <workItem from="1695048318841" duration="1291000" />
     </task>
     <task id="LOCAL-00001" summary="Add configuration files and scripts">
       <option name="closed" value="true" />
@@ -264,7 +263,15 @@
       <option name="project" value="LOCAL" />
       <updated>1692799760356</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Add AWS profile switcher function to aws.zsh">
+      <option name="closed" value="true" />
+      <created>1692800013923</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1692800013923</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -291,7 +298,8 @@
     <MESSAGE value="Updated gcp.zsh" />
     <MESSAGE value="Change subscription variable and update alias in azure.zsh" />
     <MESSAGE value="Refactor gcp.zsh for better error handling and variable scope" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor gcp.zsh for better error handling and variable scope" />
+    <MESSAGE value="Add AWS profile switcher function to aws.zsh" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add AWS profile switcher function to aws.zsh" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
