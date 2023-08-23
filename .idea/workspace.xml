@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce942d79-c752-46a8-99c1-bfd4d8a586c5" name="変更" comment="Update shell script extensions">
+    <list default="true" id="ce942d79-c752-46a8-99c1-bfd4d8a586c5" name="変更" comment="Refactor gcp.zsh for better error handling and variable scope">
+      <change afterPath="$PROJECT_DIR$/aws.zsh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -89,7 +90,7 @@
       <module name="cloud-cli" />
       <working_directory value="$PROJECT_DIR$" />
       <go_parameters value="-i" />
-      <kind />
+      <kind value="FILE" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <method v="2" />
@@ -98,7 +99,7 @@
       <module name="cloud-cli" />
       <working_directory value="$PROJECT_DIR$" />
       <go_parameters value="-i" />
-      <kind />
+      <kind value="DIRECTORY" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
@@ -188,6 +189,8 @@
       <updated>1694852128612</updated>
       <workItem from="1694852129721" duration="12242000" />
       <workItem from="1695006348661" duration="1016000" />
+      <workItem from="1695007407307" duration="874000" />
+      <workItem from="1695048318841" duration="1183000" />
     </task>
     <task id="LOCAL-00001" summary="Add configuration files and scripts">
       <option name="closed" value="true" />
@@ -237,7 +240,31 @@
       <option name="project" value="LOCAL" />
       <updated>1694893000958</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Updated gcp.zsh">
+      <option name="closed" value="true" />
+      <created>1695007456032</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1695007456032</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Change subscription variable and update alias in azure.zsh">
+      <option name="closed" value="true" />
+      <created>1692799734468</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1692799734468</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Refactor gcp.zsh for better error handling and variable scope">
+      <option name="closed" value="true" />
+      <created>1692799760356</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1692799760356</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,7 +287,11 @@
     <MESSAGE value="Updated shell script extensions" />
     <MESSAGE value="The shell script extensions have been updated from `.sh` to `.zsh` for better compatibility with the Z-shell (Zsh). Additionally, the tasks and commit messages in the `.idea/workspace.xml` file have been updated appropriately to reflect these changes. The `cloud-cli.zsh` script has also been added, sourcing the updated GCP, Azure, and Kubernetes scripts." />
     <MESSAGE value="Update shell script extensions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update shell script extensions" />
+    <MESSAGE value="Script extensions have been updated from `.sh` to `.zsh` for better compatibility with Z-shell (Zsh). Also updated tasks and commit messages in `.idea/workspace.xml` to reflect these changes. Added `cloud-cli.zsh` script that seconds GCP, Azure, and Kubernetes scripts." />
+    <MESSAGE value="Updated gcp.zsh" />
+    <MESSAGE value="Change subscription variable and update alias in azure.zsh" />
+    <MESSAGE value="Refactor gcp.zsh for better error handling and variable scope" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor gcp.zsh for better error handling and variable scope" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
