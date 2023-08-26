@@ -4,8 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce942d79-c752-46a8-99c1-bfd4d8a586c5" name="変更" comment="Add AWS profile switcher function to aws.zsh">
-      <change beforePath="$PROJECT_DIR$/cloud-cli.zsh" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-cli.zsh" afterDir="false" />
+    <list default="true" id="ce942d79-c752-46a8-99c1-bfd4d8a586c5" name="変更" comment="Adding the AWS profile switcher introduces much-needed functionality and improves user-experience by allowing the user to easily switch between different AWS profiles">
+      <change afterPath="$PROJECT_DIR$/cloud-cli/cloud-cli.zsh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zsh-fzf.zsh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aws.zsh" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-cli/aws.zsh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/azure.zsh" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-cli/azure.zsh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-cli.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gcp.zsh" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-cli/gcp.zsh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s.zsh" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/k8s.zsh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,29 +40,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;ignore_missing_gitignore&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/s-matsubara/Workspaces/cloud-cli&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ruby.rails.projectView.checked&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "go.import.settings.migrated": "true",
+    "ignore_missing_gitignore": "true",
+    "last_opened_file_path": "/Users/s-matsubara/Documents/Workspaces/zsh-fzf",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ruby.rails.projectView.checked": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/k8s" />
+      <recent name="$PROJECT_DIR$/cloud-cli" />
     </key>
   </component>
   <component name="RubyModuleManagerSettings">
@@ -189,7 +201,8 @@
       <workItem from="1694852129721" duration="12242000" />
       <workItem from="1695006348661" duration="1016000" />
       <workItem from="1695007407307" duration="874000" />
-      <workItem from="1695048318841" duration="1291000" />
+      <workItem from="1695048318841" duration="2562000" />
+      <workItem from="1693093623730" duration="375000" />
     </task>
     <task id="LOCAL-00001" summary="Add configuration files and scripts">
       <option name="closed" value="true" />
@@ -271,7 +284,15 @@
       <option name="project" value="LOCAL" />
       <updated>1692800013923</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Adding the AWS profile switcher introduces much-needed functionality and improves user-experience by allowing the user to easily switch between different AWS profiles">
+      <option name="closed" value="true" />
+      <created>1692800135999</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1692800135999</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -299,7 +320,8 @@
     <MESSAGE value="Change subscription variable and update alias in azure.zsh" />
     <MESSAGE value="Refactor gcp.zsh for better error handling and variable scope" />
     <MESSAGE value="Add AWS profile switcher function to aws.zsh" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add AWS profile switcher function to aws.zsh" />
+    <MESSAGE value="Adding the AWS profile switcher introduces much-needed functionality and improves user-experience by allowing the user to easily switch between different AWS profiles" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding the AWS profile switcher introduces much-needed functionality and improves user-experience by allowing the user to easily switch between different AWS profiles" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
