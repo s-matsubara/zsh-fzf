@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 function _aws_change_profile() {
   local profile
   local -A opthash
