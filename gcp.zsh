@@ -16,9 +16,12 @@ function _gcp_check_configuration() {
 function _gcp_create_configuration() {
   local project="$1"
 
+  account=$(gcloud config get-value account)
+
   if [[ -n ${project} ]]; then
     gcloud config configurations create "${project}"
     gcloud config set project "${project}"
+    gcloud config set account "${account}"
   fi
 
   return $?
@@ -28,7 +31,9 @@ function _gcp_activate_configuration() {
   local project="$1"
 
   if [[ -n ${project} ]]; then
-    if _gcp_check_configuration "${project}";
+    _gcp_check_configuration "${project}"
+
+    if [[ $? == 1 ]];
     then
       _gcp_create_configuration "${project}"
     else
