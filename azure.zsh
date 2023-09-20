@@ -14,7 +14,7 @@ function _azure_change_subscription() {
   fi
 
   if [[ -z "${subscription}" ]]; then
-    subscription=$(az account list --all -o tsv | fzf --exit-0 | awk 'print $3')
+    subscription=$(az account list --all -o tsv | fzf --exit-0 | awk '{print $3}')
   fi
 
   if [[ -z "${subscription}" ]]; then return 1; fi
@@ -43,7 +43,7 @@ function _azure_change_kubernetes() {
 
   if [[ -z "${group}" ]]; then return 1; fi
 
-  cluster=$(az aks list -o table --resource-group "${group}" | fzf --header-lines=2 --exit-0 | awk 'print $1')
+  cluster=$(az aks list -o table --resource-group "${group}" | fzf --header-lines=2 --exit-0 | awk '{print $1}')
 
   if [[ -z "${cluster}" ]]; then return 1; fi
 
