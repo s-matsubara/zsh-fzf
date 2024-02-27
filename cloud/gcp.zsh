@@ -98,8 +98,8 @@ function _gcp_compute_ssh() {
 
   if [[ -z "${result}" ]]; then return 1; fi
 
-  instance=$(echo "${result}" | awk 'print $1')
-  zone=$(echo "${result}" | awk 'print $1')
+  instance=$(echo "${result}" | awk '{print $1}')
+  zone=$(echo "${result}" | awk '{print $1}')
 
   if [[ -z "${project}" ]]; then return 1; fi
   if [[ -z "${instance}" ]]; then return 1; fi
@@ -116,7 +116,7 @@ alias gcssh=_gcp_compute_ssh
 ######################### GKE #########################
 
 function _gcp_kubernetes_complete() {
-  line=$(gcloud container clusters list | sed 1d | awk 'print $1')
+  line=$(gcloud container clusters list | sed 1d | awk '{print $1}')
   _value cluster "${line[@]}"
 }
 
@@ -140,7 +140,7 @@ function _gcp_change_kubernetes() {
 
   if [[ -z "${cluster}" ]]; then
     line=$(gcloud container clusters list | fzf --header-lines=1)
-    cluster=$(echo "${line}" | awk 'print $1')
+    cluster=$(echo "${line}" | awk '{print $1}')
   else
     line=$(gcloud container clusters list | grep "${cluster}")
 
@@ -149,7 +149,7 @@ function _gcp_change_kubernetes() {
 
   if [[ -z "${cluster}" ]]; then return 1; fi
 
-  zone_or_region=$(echo "${line}" | awk 'print $2')
+  zone_or_region=$(echo "${line}" | awk '{print $2}')
 
   _gcp_change_kubernetes "${cluster}" "${zone_or_region}"
 
