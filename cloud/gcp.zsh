@@ -99,7 +99,7 @@ function _gcp_compute_ssh() {
   if [[ -z "${result}" ]]; then return 1; fi
 
   instance=$(echo "${result}" | awk '{print $1}')
-  zone=$(echo "${result}" | awk '{print $1}')
+  zone=$(echo "${result}" | awk '{print $2}')
 
   if [[ -z "${project}" ]]; then return 1; fi
   if [[ -z "${instance}" ]]; then return 1; fi
